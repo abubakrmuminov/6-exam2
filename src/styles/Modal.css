@@ -1,0 +1,145 @@
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  width: 592px;
+  max-width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.modal-header::before {
+  content: url("../images/icon-order-confirmed.svg");
+  font-size: 48px;
+  flex-shrink: 0;
+}
+
+.modal-header div h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #260f08;
+  margin: 0 0 8px 0;
+  line-height: 1.2;
+}
+
+.modal-header div p {
+  font-size: 16px;
+  color: #87635a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.order-summary {
+  background: #fcf8f5;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 40px;
+}
+
+.order-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.order-item img {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.order-item-info {
+  flex: 1;
+}
+
+.order-item-info h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #260f08;
+  margin: 0 0 8px 0;
+}
+
+.order-item-info p {
+  font-size: 14px;
+  color: #c73b0f;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.order-item-info .quantity {
+  font-weight: 600;
+}
+
+.order-item-info .unit-price {
+  color: #87635a;
+}
+
+.order-item-total {
+  font-size: 16px;
+  font-weight: 600;
+  color: #260f08;
+}
+
+.modal-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 24px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #260f08;
+}
+
+.modal button {
+  background: #c73b0f;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 16px 24px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  transition: all 0.2s ease;
+}
+
+.modal button:hover {
+  background: #ad2a02;
+}
+
+@media (max-width: 768px) {
+  .modal {
+    padding: 24px;
+    width: 100%;
+    margin: 16px;
+  }
+  
+  .modal-header div h2 {
+    font-size: 32px;
+  }
+}
